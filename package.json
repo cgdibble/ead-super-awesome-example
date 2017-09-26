@@ -1,0 +1,15 @@
+{
+  "name": "ead-super-awesome-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "effects-as-data": "^2.14.7",
+    "jest": "^21.1.0"
+  }
+}
