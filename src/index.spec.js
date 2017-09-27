@@ -10,7 +10,7 @@ test("stuff", testFn(fn)(() => {
     httpGetCmd('https://swapi.co/api/people/9')
   ];
   return args()
-  .yieldCmd(nowCmd()).yieldReturns(new Date(1506442247618))
-  .yieldCmd(allHttpCalls).yieldReturns([{ name: 'Bob'}, { name: 'Bill'}])
+  .yieldCmd(nowCmd()).yieldReturns({ success: true, payload: new Date(1506442247618) })
+  .yieldCmd(allHttpCalls).yieldReturns([{ success: true, payload: { name: 'Bob'}}, {success: true, payload: { name: 'Bill'}}])
   .returns('Bob + Bill')
 }));

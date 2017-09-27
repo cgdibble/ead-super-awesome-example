@@ -1,7 +1,8 @@
 const { call } = require("effects-as-data");
 const fn = require("./src");
-const now = require("./src/handlers/now");
-const httpGet = require("./src/handlers/httpGet");
+const failable = require("./src/helpers/failables");
+const now = failable(require("./src/handlers/now"));
+const httpGet = failable(require("./src/handlers/httpGet"));
 
 call(
   {
@@ -10,7 +11,7 @@ call(
     onCommand: console.log,
     onCommandComplete: console.log
   },
-  { now, httpGet, blah: "" },
+  { now, httpGet },
   fn
 )
   .then(console.log)
