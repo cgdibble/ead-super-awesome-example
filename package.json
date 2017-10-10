@@ -3,13 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "effects-as-data": "^2.14.7",
-    "jest": "^21.1.0"
-  }
+  "dependencies": {}
 }
